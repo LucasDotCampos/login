@@ -1,11 +1,12 @@
 import { Request, Response } from 'express'
 import { getRepository } from 'typeorm';
 
-import User from '../models/User'
+import { User } from '../models/User'
 
 
 class UserController {
   async store(request: Request, response: Response) {
+    console.log('chegou no users')
     const repository = getRepository(User);
 
     const { email, password } = request.body

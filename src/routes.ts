@@ -2,7 +2,7 @@ import { Router } from "express";
 import AuthController from "./app/controllers/AuthController";
 import UserController from "./app/controllers/UserController";
 
-const routes = Router();
+const routes = Router(); // routes
 
 routes.post("/users", UserController.store);
 routes.post("/auth", AuthController.authenticate);
